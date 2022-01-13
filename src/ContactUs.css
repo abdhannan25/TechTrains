@@ -1,0 +1,16 @@
+.AU-main{
+    background-color: #0d1f38;
+    height: 60vh;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 150px;
+    border: 1px solid #0d1f38;
+}
+
+.AU-main h5{
+    font-size: 50px;
+    font-weight: 800;
+}
+.AU-main p{
+    font-size: 20px;
+}
