@@ -10,7 +10,7 @@ import pic5 from '../imran.jpg'
 const FacultyCard = ({props}) => {
   console.log(props);
   const facultyData = props;
-  console.log(facultyData);
+  // console.log(facultyData);
   // state = {
   //   data: [
   //       {
