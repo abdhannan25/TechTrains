@@ -28,7 +28,7 @@ const studentRouter = require('./routes/student');
 app.use('/student',studentRouter)
 const courseRouter = require('./routes/course');
 app.use('/course',courseRouter)
-const courseRouter = require('./routes/faculty');
+const facultyRouter = require('./routes/faculty');
 app.use('/faculty',facultyRouter)
 
 app.listen(port, () => {
