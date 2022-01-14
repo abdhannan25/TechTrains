@@ -19,8 +19,9 @@ export default class Courses extends Component {
           .catch((error) => {
               console.log(error)
           })
+          
       }
-
+      
     courseList(){
             return <CoursesCard courses = {this.state.courses}/>;
         }

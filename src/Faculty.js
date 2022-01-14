@@ -10,19 +10,27 @@ export default class Faculty extends Component {
         faculty: []
     };
 
-    componentDidMount(){
-        axios.get('http://localhost:5000/faculty/')
-        .then(res =>{
-            this.setState({faculty: res.data})
-            console.log(res.data)
+    async componentDidMount(){
+        await fetch('http://localhost:5000/faculty/')
+         .then(res =>{
+                        
+            return res.json()
+            //  this.setState({faculty: res.data})
+        })          
+          .then(res =>{
+            console.log(res)
+            // this.setState({faculty: res})
+            this.state.faculty = res;
           })
           .catch((error) => {
               console.log(error)
           })
+        console.log(this.state.faculty)
       }
-
-      facultyList(){
-        return <FacultyCard faculty = {this.state.faculty}/>;
+      
+        facultyList(){
+            console.log(this.state.faculty) 
+            return <FacultyCard faculty = {this.state.faculty}/>;
     }
 
 
@@ -39,6 +47,7 @@ export default class Faculty extends Component {
                     </div>
                     </div>
                     {this.facultyList()}
+                    {/* <FacultyCard faculty = {this.state.faculty}/> */}
                     
                 </div>
                 

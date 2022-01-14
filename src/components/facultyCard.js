@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import pic2 from '../teacher.jpeg'
 import pic1 from '../MAli.jpg'
 import pic3 from '../akhzar.jpg'
@@ -7,10 +7,10 @@ import pic4 from '../hisham.jpg'
 import pic5 from '../imran.jpg'
 
 
-const FacultyCard = ({props}) => {
-  console.log(props);
-  const facultyData = props;
-  // console.log(facultyData);
+const FacultyCard = ({ faculty }) => {
+  console.log(faculty);
+  const facultyData = faculty;
+  console.log(facultyData);
   // state = {
   //   data: [
   //       {

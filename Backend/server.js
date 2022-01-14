@@ -30,6 +30,8 @@ const courseRouter = require('./routes/course');
 app.use('/course',courseRouter)
 const facultyRouter = require('./routes/faculty');
 app.use('/faculty',facultyRouter)
+const commentRouter = require('./routes/comments');
+app.use('/comments',commentRouter)
 
 app.listen(port, () => {
     console.log(`Server is running on port : ${port}`);
