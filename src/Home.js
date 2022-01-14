@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import front from './fis-background.jpg'
+import front from './img/fis-background.jpg'
 import './home.css';
 import Footer from './components/Footer'
 import { BiSupport } from 'react-icons/bi'

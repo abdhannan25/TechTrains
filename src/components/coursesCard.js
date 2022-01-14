@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import pic1 from "../mern.jpg";
-import pic2 from "../mean.PNG";
-import pic3 from "../Mad.jpg";
-import pic4 from "../uiux.jpg";
-import pic5 from "../wordpress.jpg";
-import pic6 from "../gfx.jpg";
-import pic7 from "../vid.jpg";
+import pic1 from "../img/mern.jpg";
+import pic2 from "../img/mean.PNG";
+import pic3 from "../img/Mad.jpg";
+import pic4 from "../img/uiux.jpg";
+import pic5 from "../img/wordpress.jpg";
+import pic6 from "../img/gfx.jpg";
+import pic7 from "../img/vid.jpg";
 import "./coursesCard.css";
 
 const CoursesCard = ({ courses }) => {
@@ -23,20 +23,7 @@ const CoursesCard = ({ courses }) => {
   ];
   
   const courseData = courses;
-  // courseData.map((c) =>{
-  //   {
-  //     course:[
-  //       {
-  //         title: c.title,
-  //         std: c.students,
-  //         lec: c.lectures,
-  //       },
-      
-  //   ]}
-  // })
 
-  // const cardData =  [{course}, { images: imgData }]
-  //
   console.log(courseData);
   return (
     <>
@@ -44,19 +31,9 @@ const CoursesCard = ({ courses }) => {
         {courseData.map((course) => {
           return (
             <div className="col-4 mb-4 ">
-              <div class="card" style={{ height: "500px" }}>
-              {/* <img
-                      src={course.images.pic}
-                      class="card-img-top"
-                      style={{ height: "250px" }}
-                      alt="..."
-                    /> */}
-                {/* {course.images.map((imgg) => {
-                  return (
-                   
-                  );
-                })} */}
-                <div class="card-body  ">
+              <div class="card" >
+             
+                <div class="card-body heading text-light ">
                   <h5 class="card-title">
                     <strong>{course.title}</strong>
                   </h5>
@@ -86,7 +63,62 @@ const CoursesCard = ({ courses }) => {
     </>
   );
 };
-//   state = {
+
+export default CoursesCard;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // courseData.map((c) =>{
+  //   {
+  //     course:[
+  //       {
+  //         title: c.title,
+  //         std: c.students,
+  //         lec: c.lectures,
+  //       },
+      
+  //   ]}
+  // })
+
+  // const cardData =  [{course}, { images: imgData }]
+  //
+
+
+
+
+
+
+
+
+
+  //   state = {
 //     // title: props.title,
 //     // students: props.students,
 //     // lectures: props.lectures,
@@ -202,4 +234,3 @@ const CoursesCard = ({ courses }) => {
 //         </div>
 //     )
 // }}
-export default CoursesCard;

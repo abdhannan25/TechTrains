@@ -2,36 +2,29 @@ import React, { Component } from 'react'
 import FacultyCard from './components/facultyCard';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import img from './facultyimg1.jpg'
+import img from './img/facultyimg1.jpg'
 import axios from "axios";
 
 export default class Faculty extends Component {
     state={
-        faculty: []
+        faculty:[]
     };
-
-    async componentDidMount(){
-        await fetch('http://localhost:5000/faculty/')
-         .then(res =>{
-                        
-            return res.json()
-            //  this.setState({faculty: res.data})
-        })          
-          .then(res =>{
-            console.log(res)
-            // this.setState({faculty: res})
-            this.state.faculty = res;
+    componentDidMount(){
+        axios.get('http://localhost:5000/faculty/')
+        .then(res =>{
+            this.setState({faculty: res.data})
+            console.log(res.data)
           })
           .catch((error) => {
               console.log(error)
           })
-        console.log(this.state.faculty)
+          
       }
       
-        facultyList(){
-            console.log(this.state.faculty) 
+    facultyList(){
+            console.log(this.state.faculty)
             return <FacultyCard faculty = {this.state.faculty}/>;
-    }
+        }
 
 
     render() {
@@ -47,7 +40,6 @@ export default class Faculty extends Component {
                     </div>
                     </div>
                     {this.facultyList()}
-                    {/* <FacultyCard faculty = {this.state.faculty}/> */}
                     
                 </div>
                 
@@ -57,3 +49,63 @@ export default class Faculty extends Component {
         );
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // state={
+    //     faculty: []
+    // };
+
+    // async componentDidMount(){
+    //     await fetch('http://localhost:5000/faculty/')
+    //      .then(res =>{
+                        
+    //         return res.json()
+    //         //  this.setState({faculty: res.data})
+    //     })          
+    //       .then(res =>{
+    //         console.log(res)
+    //         // this.setState({faculty: res})
+    //         this.state.faculty = res;
+    //         console.log(this.state.faculty) 
+    //         return <FacultyCard faculty = {this.state.faculty}/>;
+    //       })
+    //       .catch((error) => {
+    //           console.log(error)
+    //       })
+    //     console.log(this.state.faculty)
+    //   }
+
+    //     facultyList(){
+    //         // console.log(this.state.faculty) 
+    //         // return <FacultyCard faculty = {this.state.faculty}/>;
+    // }

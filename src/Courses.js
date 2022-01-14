@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import CoursesCard from './components/coursesCard';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import img from './coursesimg.jpg'
+import img from './img/coursesimg.jpg'
 import './courses.css'
 import axios from "axios";
 
@@ -39,7 +39,6 @@ export default class Courses extends Component {
                         
                     </div>
                     </div>
-                    {/* <CoursesCard mydata={{ ...this.state.carddata }} /> */}
                     {this.courseList()}
                     </div>    
                 

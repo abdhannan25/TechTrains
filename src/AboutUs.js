@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import './AboutUs.css';
-import img1 from './au-img1.jpg';
-import img2 from './au-img2.jpg';
-import img3 from './au-img3.jpg';
+import img1 from './img/au-img1.jpg';
+import img2 from './img/au-img2.jpg';
+import img3 from './img/au-img3.jpg';
 
 
 export default class AboutUs extends Component {
