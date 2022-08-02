@@ -193,8 +193,7 @@ class Register extends Component {
                             {cityErr &&    
                                 <div style={{ color: "red", paddingBottom: 10 }}>{courseErr}</div>    
                             }    
-                        </div> 
-                           
+                        </div>                            
                         <input className='mt-5' type="submit" value="Submit" /> 
                         </div>   
                     </form>    
